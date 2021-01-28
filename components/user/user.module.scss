@@ -1,0 +1,43 @@
+$size: 34px;
+.user {
+	height: $size;
+	background: #f5f8f9;
+	padding: 0px;
+	border-radius: $size;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+.name {
+	font-size: 12px;
+	text-transform: capitalize;
+}
+.icon {
+	width: $size;
+	height: $size;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	img {
+		width: $size / 2;
+		height: $size / 2;
+		object-fit: contain;
+		object-position: center;
+	}
+}
+.averta {
+	height: $size;
+	width: $size;
+	border-radius: $size;
+	overflow: hidden;
+	background: #222;
+	margin-left: 8px;
+
+	img {
+		width: $size;
+		height: $size;
+		object-fit: cover;
+		object-position: center;
+	}
+}

@@ -1,0 +1,382 @@
+@import './mixims/media.scss';
+#__next {
+	display: flex;
+	height: 100vh;
+	width: 100%;
+}
+.main {
+	display: flex;
+	padding: 20px;
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	//overflow: hidden;
+}
+.header {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+.control {
+	background: #fff;
+	display: flex;
+	height: 100%;
+	border-radius: 8px;
+	padding: 40px 50px;
+	width: 100%;
+	max-width: 700px;
+	flex-direction: column;
+	//overflow: hidden;
+
+	@include for-phone-only {
+		padding: 40px 30px;
+		margin-bottom: 70px;
+		margin-top: 20px;
+	}
+}
+
+.details {
+	margin-top: 80px;
+	@include for-phone-only {
+		margin-top: 50px;
+		//flex-direction: column;
+	}
+}
+.details__header {
+	display: flex;
+	justify-content: space-between;
+
+	@include for-phone-only {
+		flex-direction: column;
+	}
+}
+.details__title {
+	margin: 0;
+	padding: 0;
+	font-size: 32px;
+	font-weight: 500;
+}
+.details__info {
+	flex-direction: column;
+	display: flex;
+
+	@include for-phone-only {
+		margin-top: 20px;
+	}
+}
+
+.details__info__title {
+	display: flex;
+	font-weight: 500;
+	font-size: 14px;
+	align-items: center;
+	-webkit-font-smoothing: subpixel-antialiased;
+
+	svg {
+		margin-right: 8px;
+	}
+}
+.details__info__p {
+	max-width: 146px;
+	font-size: 12px;
+	color: #a4a4a4;
+	margin-left: 24px;
+	margin-top: 6px;
+
+	@include for-phone-only {
+		max-width: 100%;
+	}
+}
+
+.details__menu {
+	margin-top: 40px;
+	border-bottom: 1px solid rgba(#a4a4a4, 0.4);
+
+	ul {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		display: flex;
+	}
+}
+
+.details__menu__item {
+	padding: 14px 0;
+	font-size: 14px;
+	font-weight: 300;
+	text-transform: capitalize;
+	margin-right: 30px;
+	color: #a4a4a4;
+	cursor: pointer;
+	margin-bottom: -1px;
+
+	&.active {
+		border-bottom: 2px solid #222;
+	}
+}
+.details__menu__item__active {
+	border-bottom: 2px solid rgba(#222, 0.6);
+	color: #222;
+}
+
+.cards__wrap {
+	margin-top: 40px;
+	display: flex;
+
+	@include for-phone-only {
+		flex-direction: column;
+	}
+}
+.cards__stacks {
+	padding: 0;
+	margin: 0;
+	width: 220px;
+	list-style: none;
+	min-width: 220px;
+
+	@include for-phone-only {
+		display: flex;
+		width: 100%;
+		overflow: auto;
+		padding-top: 10px;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	li {
+		width: 100%;
+		height: 120px;
+		//background: #a4a4a4;
+		margin-bottom: 20px;
+		border-radius: 9px;
+		cursor: pointer;
+
+		@include for-phone-only {
+			min-width: 200px;
+			margin-right: 20px;
+		}
+	}
+}
+.o {
+	background: #ced9fd;
+	position: relative;
+	&::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 1;
+		height: 100%;
+		width: 100%;
+		opacity: 0.7;
+		background: transparent url('/images/pattern1.svg') 10px 0 / contain
+			no-repeat;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		right: 10px;
+		bottom: 10px;
+		z-index: 10;
+		height: 20px;
+		width: 30px; //Visa_Inc._logo.svg
+		background: transparent url('/images/mastercard.svg') 0 / contain no-repeat;
+	}
+}
+
+.card_umber {
+	position: absolute;
+	right: 10px;
+	top: 14px;
+	font-size: 12px;
+}
+
+.oo {
+	background: #f9cba1;
+	position: relative;
+
+	&::after {
+		content: '';
+		position: absolute;
+		right: 10px;
+		bottom: 10px;
+		z-index: 10;
+		height: 20px;
+		width: 38px; //Visa_Inc._logo.svg
+		background: transparent url('/images/Visa_Inc._logo.svg') 0 / contain
+			no-repeat;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 1;
+		height: 100%;
+		width: 100%;
+		opacity: 0.7;
+		background: transparent url('/images/pattern2.svg') 10px 0 / contain
+			no-repeat;
+	}
+}
+
+.ooo {
+	background: #bddba6;
+	position: relative;
+
+	&::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 1;
+		height: 100%;
+		width: 100%;
+		opacity: 0.7;
+		background: transparent url('/images/pattern3.svg') 10px 0 / contain
+			no-repeat;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		right: -6px;
+		top: -6px;
+		z-index: 10;
+		height: 20px;
+		background: #536b40;
+		width: 20px;
+		border-radius: 20px;
+	}
+}
+
+.form__stack {
+	width: 100%;
+	margin-left: 50px;
+
+	@include for-phone-only {
+		//min-width: 200px;
+		margin-top: 20px;
+		margin-left: 0px;
+	}
+}
+
+.form__control {
+	margin-bottom: 30px;
+	display: flex;
+	flex-direction: column;
+
+	span {
+		font-size: 13px;
+		color: #a4a4a4;
+		margin-bottom: 10px;
+	}
+}
+
+.master {
+	background: #f5f8f9 url('/images/mastercardd.svg') 96% 50% / 30px no-repeat !important;
+}
+
+.split {
+	display: flex;
+	flex-direction: row;
+
+	div {
+		margin-right: 20px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		&:last-child {
+			margin: 0;
+		}
+	}
+}
+
+.submit {
+	border: none;
+	background: #222;
+	padding: 13px 20px;
+	width: 100%;
+	outline: none;
+	border-radius: 5px;
+	font-weight: 300;
+	font-size: 15px;
+	color: #fff;
+	cursor: pointer;
+}
+
+.add {
+	position: absolute;
+	right: 16px;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	font-size: 12px;
+	height: 20px;
+	display: flex;
+	align-items: center;
+	svg {
+		margin-left: 8px;
+	}
+}
+
+.order__btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 50px;
+	border-bottom: 1px solid rgba(#000, 0.1);
+	position: absolute;
+	top: 0;
+	width: 100%;
+	background-color: #000;
+	color: #fff;
+	z-index: 5;
+	svg {
+		margin-right: 6px;
+	}
+}
+.cotet {
+	flex-direction: column;
+	flex: 1;
+	height: calc(100vh - 180px);
+	overflow: auto;
+	margin-top: 56px;
+	position: relative;
+	margin-bottom: 50px;
+	-webkit-overflow-scrolling: touch;
+	padding-bottom: 50px;
+	background: #f5f8f9;
+	transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+	-webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.order__sheet {
+	-webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+	transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+	position: fixed;
+	-webkit-transform: translateZ(0px);
+	transform: translateZ(0px);
+	bottom: 0;
+	width: calc(100% - 20px);
+	margin: auto;
+	height: 50px;
+	left: 0;
+	right: 0;
+	z-index: 200;
+	-webkit-filter: drop-shadow(0 2mm 2mm rgba(#000, 0.2));
+	filter: drop-shadow(0 2mm 2mm rgba(#000, 0.2));
+	background: white;
+	overflow: hidden;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+}
+
+.opened {
+	height: calc(100vh - 10% - 60px);
+}
+
+.showed {
+	opacity: 0;
+}

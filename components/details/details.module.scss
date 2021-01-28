@@ -1,0 +1,160 @@
+@import '../../styles/mixims/media.scss';
+.details {
+	margin-left: 30px;
+	padding-top: 50px;
+	//background-color: aqua;
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+
+	@include for-phone-only {
+		margin-left: 0px;
+		padding: 20px 15px;
+		margin-top: 10px;
+	}
+}
+
+.details__title {
+	margin: 0;
+	padding: 0;
+	font-size: 30px;
+	font-weight: 500;
+
+	@include for-phone-only {
+		margin: 10px 0 0px 0;
+	}
+}
+
+$size: 40px;
+.steps {
+	margin: 60px 0 60px 0;
+	padding: 0;
+	display: flex;
+	list-style: none;
+
+	@include for-phone-only {
+		margin: 40px 0 40px 0;
+	}
+	&__item {
+		flex: 1;
+		display: flex;
+	}
+
+	&__detail {
+		margin-left: 5px;
+		opacity: 0.7;
+		font-weight: 300;
+		font-size: 14px;
+		@include for-phone-only {
+			font-size: 13px;
+		}
+		span {
+			display: block;
+			font-size: 11px;
+			opacity: 0.5;
+		}
+	}
+	&__icon {
+		width: $size;
+		height: $size;
+		border-radius: $size;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		@include for-phone-only {
+			width: $size / 1.2;
+			height: $size / 1.2;
+			border-radius: $size / 1.2;
+		}
+
+		svg {
+			opacity: 0.8;
+		}
+	}
+}
+
+.o {
+	background: #ced9fd;
+}
+.oo {
+	background: #f9cba0;
+}
+.ooo {
+	background: #bddba6;
+}
+
+$sizes: 34px;
+.bar {
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	border-radius: 8px;
+	background: #fff;
+	padding: 13px 20px;
+	align-items: center;
+	margin-bottom: 16px;
+
+	div {
+		width: $sizes;
+		height: $sizes;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		img {
+			width: $sizes / 2;
+			height: $sizes / 2;
+			object-fit: contain;
+			object-position: center;
+			opacity: 0.4;
+		}
+	}
+	span {
+		font-weight: 500;
+		font-size: 14px;
+	}
+}
+
+.total {
+	display: flex;
+	justify-content: space-between;
+	border-radius: 8px;
+	padding: 13px 20px;
+	align-items: center;
+	margin-top: 16px;
+
+	div {
+		font-weight: 700;
+		font-size: 16px;
+	}
+	span {
+		font-weight: 300;
+		font-size: 14px;
+	}
+}
+
+.items {
+	margin: 10px 0 30px;
+	padding: 0 20px;
+	display: flex;
+	list-style: none;
+	flex-direction: column;
+
+	&__list {
+		width: 100%;
+		justify-content: space-between;
+		display: flex;
+		margin-bottom: 16px;
+
+		div {
+			font-weight: 300;
+			font-size: 14px;
+		}
+		span {
+			font-weight: 300;
+			font-size: 14px;
+			opacity: 0.7;
+		}
+	}
+}
